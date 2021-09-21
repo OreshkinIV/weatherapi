@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'application'
+}
+
+group = 'me.user'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.6'
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '1.6'
+}
+
+application {
+    mainClassName = 'MainKt'
+}
+
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation "com.squareup.moshi:moshi:1.8.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.8.0"
+}
